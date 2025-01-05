@@ -14,8 +14,8 @@ BOT_TOKEN = environ['BOT_TOKEN']
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 
-BROADCAST_CHANNEL = int(os.environ.get("BROADCAST_CHANNEL", ""))
-ADMIN_ID = set(int(x) for x in os.environ.get("ADMIN_ID", "").split())
+BROADCAST_CHANNEL = int(os.environ.get("BROADCAST_CHANNEL", "-1002265223323"))
+ADMIN_ID = set(int(x) for x in os.environ.get("ADMIN_ID", "1798348973").split())
 DB_URL = os.environ.get("DATABASE_1", "")
 BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST", True))
 
@@ -26,7 +26,7 @@ auth_users = [int(user) if id_pattern.search(user) else user for user in environ
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_channel = environ.get('FORCES_SUB')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else auth_channel
-AUTH_GROUPS = [int(admin) for admin in environ.get("AUTH_GROUPS", "").split()]
+AUTH_GROUPS = [int(admin) for admin in environ.get("AUTH_GROUPS", "-1002432444111").split()]
 TUTORIAL = "https://youtu.be/5hnYOKBzyi8"
 # MongoDB information
 DATABASE_URI = environ['DATABASE_2']
@@ -35,7 +35,7 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Messages
 default_start_msg = """
-**Hi, I'm Auto Filter V3**
+**Hi, I'm Auto Filter Bot**
 
 Here you can search files in Inline mode as well as PM, Use the below buttons to search files or send me the name of file to search.
 """
